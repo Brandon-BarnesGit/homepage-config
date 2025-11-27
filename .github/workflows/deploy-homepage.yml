@@ -1,0 +1,29 @@
+name: Deploy Homepage config to Unraid
+
+on:
+  push:
+    branches:
+      - main        # or whatever your live branch is
+  workflow_dispatch: {}
+
+jobs:
+  deploy:
+    runs-on:
+      - self-hosted
+      - unraid-homepage   # the label you set in config.sh
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Sync config into Homepage appdata
+        run: |
+          # Repo root is current directory
+          # Sync EVERYTHING except the .git folder
+          rsync -av --delete \
+            --exclude '.git' \
+            ./ /mnt/homepage/
+
+      - name: Restart Homepage container
+        run: |
+          docker restart homepage
