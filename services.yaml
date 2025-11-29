@@ -1,0 +1,231 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/service
+
+- Home Automation:
+    - HomeAssistant:
+        icon: home-assistant.png
+        href: http://192.168.60.4:8123/
+        description: Home automation and control
+        ping: http://192.168.60.4:8123/
+        widget:
+          type: homeassistant
+          url: http://192.168.60.4:8123
+          key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjNDRkYmVmY2ZmMjk0YzNlOTQzMGM0M2QyZjExMjJjZiIsImlhdCI6MTc0NDcyMDM3NSwiZXhwIjoyMDYwMDgwMzc1fQ.9vGdW_Mw51cOXFIIkzd10bmuOkh60i4cNCzjHHhupFk
+
+    - Scrypted:
+        icon: scrypted.png
+        href: https://192.168.60.5:10443/
+        description: Video integration platform
+        ping: https://192.168.60.5:10443/
+
+- HomeHub Infrastructure:
+    - HomeHub Portainer:
+        icon: portainer.png
+        href: https://192.168.60.5:9443/
+        description: Docker container management
+        ping: https://192.168.60.5:9443/
+        widget:
+          type: portainer
+          url: https://192.168.60.5:9443
+          env: 1
+          key: ptr_xxxxxxxxxxxx
+
+    - HomeHub Pi-hole:
+        icon: pi-hole.png
+        href: https://192.168.60.5/admin/
+        description: Network-wide ad blocking
+        ping: https://192.168.60.5/admin/
+        widget:
+          type: pihole
+          url: https://192.168.60.5
+          key: /xkzPXx1fk/ZGzac9zCSekzxiVeaKKKxQ63T0CtCAFc=
+          version: 6
+
+    - HomeHub Prometheus:
+        icon: prometheus.png
+        href: http://192.168.60.5:9090/
+        description: Metrics monitoring system
+        ping: http://192.168.60.5:9090/
+
+    - HomeHub Grafana:
+        icon: grafana.png
+        href: http://192.168.60.5:3000/
+        description: Data visualization & monitoring
+        ping: http://192.168.60.5:3000/
+        widget:
+          type: grafana
+          url: http://192.168.60.5:3000
+
+- HomeHub 2 Infrastructure:
+    - HomeHub 2 Portainer:
+        icon: portainer.png
+        href: https://192.168.60.6:9443/
+        description: Docker container management
+        ping: https://192.168.60.6:9443/
+        widget:
+          type: portainer
+          url: https://192.168.60.6:9443
+          env: 1
+          key: ptr_xxxxxxxxxxxx
+
+    - HomeHub 2 Pi-hole:
+        icon: pi-hole.png
+        href: https://192.168.60.6/admin/
+        description: Network-wide ad blocking
+        ping: https://192.168.60.6/admin/
+        widget:
+          type: pihole
+          url: https://192.168.60.6
+          key: 1WzD5wEaTpWexWvJtWOkHBoBq1cOBg5Vtqt82atAtXI=
+          version: 6
+
+- Server Hardware:
+    - iLO:
+        icon: hp.png
+        href: https://192.168.60.11/
+        description: HP server management
+        ping: https://192.168.60.11/
+
+    - Proxmox:
+        icon: proxmox.png
+        href: https://192.168.60.12:8006/
+        description: Virtual environment manager
+        ping: https://192.168.60.12:8006/
+        widget:
+          type: proxmox
+          url: https://192.168.60.12:8006
+
+    - JetKVM:
+        icon: jetkvm.png
+        href: http://192.168.60.151/
+        description: KVM over IP
+        ping: http://192.168.60.151/
+
+- Unraid Server:
+    - Unraid:
+        icon: unraid.png
+        href: http://192.168.60.15/
+        description: NAS storage system
+        ping: http://192.168.60.15/
+        widget:
+          type: unraid
+          url: http://192.168.60.15
+
+    - Unraid Config Guardian:
+        icon: si-unraid
+        href: http://192.168.60.15:7842/
+        description: Configuration backup
+        ping: http://192.168.60.15:7842/
+
+- Media Server:
+    - Plex:
+        icon: plex.png
+        href: http://192.168.60.15:32400/web/index.html#!/
+        description: Media streaming server
+        ping: http://192.168.60.15:32400/
+        widget:
+          type: plex
+          url: http://192.168.60.15:32400
+          key: up_bSSEHXUXKRpz8dmxk
+
+    - Jellyfin:
+        icon: jellyfin.png
+        href: http://192.168.60.15:8096/
+        description: Free media system
+        ping: http://192.168.60.15:8096/
+
+    - Tautulli:
+        icon: tautulli.png
+        href: http://192.168.60.15:8181/
+        description: Plex monitoring & analytics
+        ping: http://192.168.60.15:8181/
+        widget:
+          type: tautulli
+          url: http://192.168.60.15:8181
+          key: a1d12ee3304a4fa38dd80adb9ecabb76
+
+    - Wizarr:
+        icon: wizarr.png
+        href: http://192.168.60.15:5690/
+        description: User invitation system
+        ping: http://192.168.60.15:5690/
+
+- Media Management:
+    - Overseerr:
+        icon: overseerr.png
+        href: http://192.168.60.15:5055/
+        description: Media request management
+        ping: http://192.168.60.15:5055/
+        widget:
+          type: overseerr
+          url: http://192.168.60.15:5055
+          key: MTczMTA3MTUwMjE4MzA0YWVmMGI3LWVlMjUtNGNmMi05Njg4LTM5ZThjZmM4NDk5Ng==
+
+    - Boxarr:
+        icon: boxarr.png
+        href: http://192.168.60.15:8888/overview
+        description: Arr stack overview
+        ping: http://192.168.60.15:8888/
+
+    - Huntarr:
+        icon: huntarr.png
+        href: http://192.168.60.15:9705/login
+        description: Media hunting tool
+        ping: http://192.168.60.15:9705/
+
+    - Prowlarr:
+        icon: prowlarr.png
+        href: http://192.168.60.15:9696/
+        description: Indexer manager
+        ping: http://192.168.60.15:9696/
+        widget:
+          type: prowlarr
+          url: http://192.168.60.15:9696
+          key: ad881b031d674cc6ae2d65b918211a02
+
+    - Sonarr:
+        icon: sonarr.png
+        href: http://192.168.60.15:8989/
+        description: TV series management
+        ping: http://192.168.60.15:8989/
+        widget:
+          type: sonarr
+          url: http://192.168.60.15:8989
+          key: 30aacb57302e4d02a89b781aba0143d0
+          enableQueue: true
+
+    - Radarr:
+        icon: radarr.png
+        href: http://192.168.60.15:7878/
+        description: Movie management
+        ping: http://192.168.60.15:7878/
+        widget:
+          type: radarr
+          url: http://192.168.60.15:7878
+          key: 1a499c4aa2294b4aa71f89ccd9b84ff9
+          enableQueue: true
+
+- Download Clients:
+    - SABnzbd:
+        icon: sabnzbd.png
+        href: http://192.168.60.15:8080/
+        description: Usenet downloader
+        ping: http://192.168.60.15:8080/
+        widget:
+          type: sabnzbd
+          url: http://192.168.60.15:8080
+          key: ca043c5eed4e4904af84894e52b80831
+
+    - Tdarr:
+        icon: tdarr.png
+        href: http://192.168.60.15:8265/#/
+        description: Media transcoding automation
+        ping: http://192.168.60.15:8265/
+
+- Dashboards:
+    - Homepage:
+        icon: homepage.png
+        href: http://192.168.60.15:3000/
+        description: This dashboard
+        ping: http://192.168.60.15:3000/
